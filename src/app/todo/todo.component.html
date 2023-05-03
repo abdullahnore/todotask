@@ -1,0 +1,31 @@
+<!-- <div class="task-container">
+    <div class="card" *ngFor="let item of list">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.startDate }} - {{ item.endDate  }}</p>
+      <button (click)="remove(item.id)">Remove</button>
+    </div>
+  </div>
+   -->
+   <div class="container">
+    <div class="task-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list">
+            <td>{{ item.name }}</td>
+            <td>{{ item.startDate }}</td>
+            <td>{{ item.endDate }}</td>
+            <td><button (click)="remove(item.id)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

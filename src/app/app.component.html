@@ -1,0 +1,24 @@
+
+<h1>{{title}}</h1>
+<div class="container">
+
+
+
+<form #todoForm="ngForm">
+    <label for="startDate">startDate </label>
+    <input type="date"id="startDate"  ngModel name="startDate"  placeholder="enter DATE">
+    <input type="text" ngModel name="task"  placeholder="enter task">
+    <label for="endDate">endDate </label>
+    <input type="date" id="endDate" ngModel name="endDate"  placeholder="enter END DATER">
+    <button (click)="taskAdd(todoForm.value)">add new task</button>
+</form>
+
+<br>
+</div>
+<div class="taskcontainer">
+
+</div>
+<app-todos [list]="this.list" (removeTask)="removeTask($event)"></app-todos>
+
+<!-- <app-todos #todos [list]="this.list"></app-todos>  -->
+<!-- <router-outlet></router-outlet> -->
